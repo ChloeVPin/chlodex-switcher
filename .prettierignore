@@ -1,0 +1,7 @@
+dist
+dist-ssr
+dist-electron
+release
+build/bin
+build/bootstrap
+node_modules

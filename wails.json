@@ -1,0 +1,16 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "codex-switcher",
+  "assetdir": "dist",
+  "wailsjsdir": "./src/wailsjs",
+  "frontend:dir": ".",
+  "frontend:build": "bun run build:frontend",
+  "outputfilename": "codex-switcher.exe",
+  "author": {
+    "name": "Codex Switcher"
+  },
+  "info": {
+    "productName": "Codex Switcher",
+    "productVersion": "1.0.0"
+  }
+}

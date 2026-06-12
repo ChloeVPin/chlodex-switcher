@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --background: hsl(240 20% 98%);
+  --foreground: hsl(240 10% 3.9%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(240 10% 3.9%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(240 10% 3.9%);
+  --primary: hsl(240 5.9% 10%);
+  --primary-foreground: hsl(0 0% 98%);
+  --secondary: hsl(240 4.8% 95.9%);
+  --secondary-foreground: hsl(240 5.9% 10%);
+  --muted: hsl(240 4.8% 95.9%);
+  --muted-foreground: hsl(240 3.8% 46.1%);
+  --accent: hsl(240 4.8% 95.9%);
+  --accent-foreground: hsl(240 5.9% 10%);
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(240 5.9% 90%);
+  --input: hsl(240 5.9% 90%);
+  --ring: hsl(240 5.9% 10%);
+  --radius: 0.625rem;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: hsl(240 7% 8%);
+  --foreground: hsl(240 6% 88%);
+  --card: hsl(240 6% 11%);
+  --card-foreground: hsl(240 6% 88%);
+  --popover: hsl(240 6% 12%);
+  --popover-foreground: hsl(240 6% 88%);
+  --primary: hsl(240 6% 92%);
+  --primary-foreground: hsl(240 7% 9%);
+  --secondary: hsl(240 5% 15%);
+  --secondary-foreground: hsl(240 6% 86%);
+  --muted: hsl(240 5% 15%);
+  --muted-foreground: hsl(240 5% 58%);
+  --accent: hsl(240 5% 17%);
+  --accent-foreground: hsl(240 6% 90%);
+  --destructive: hsl(0 62% 52%);
+  --destructive-foreground: hsl(0 0% 98%);
+  --border: hsl(240 5% 19%);
+  --input: hsl(240 5% 18%);
+  --ring: hsl(240 5% 58%);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  *, ::before, ::after {
+    border-color: var(--border);
+  }
+
+  html {
+    font-family: "Geist", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+    font-variant-numeric: tabular-nums;
+  }
+
+  body {
+    background: var(--background);
+  }
+
+  /* Prevent persistent focus outline/shadow when clicking buttons or other non-input controls */
+  *:focus:not(:focus-visible) {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+@layer components {
+  .wails-drag-region,
+  .wails-drag-region * {
+    --wails-draggable: drag;
+    -webkit-app-region: drag;
+    user-select: none;
+  }
+
+  .wails-no-drag,
+  .wails-no-drag * {
+    --wails-draggable: no-drag;
+    -webkit-app-region: no-drag;
+  }
+
+  .dashboard-stat-card {
+    border-color: hsl(from var(--border) h s l / 0.68);
+    background: var(--card);
+    box-shadow: none;
+  }
+
+  .quiet-panel {
+    border-color: hsl(from var(--border) h s l / 0.62);
+    background: hsl(from var(--card) h s l / 0.72);
+    box-shadow: none;
+  }
+
+  .soft-divider {
+    background: hsl(from var(--border) h s l / 0.55);
+  }
+
+  .sidebar-scroll,
+  .app-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(from var(--muted-foreground) h s l / 0.22) transparent;
+  }
+
+  .sidebar-scroll::-webkit-scrollbar,
+  .app-scroll::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .sidebar-scroll::-webkit-scrollbar-track,
+  .app-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .sidebar-scroll::-webkit-scrollbar-thumb,
+  .app-scroll::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: hsl(from var(--muted-foreground) h s l / 0.18);
+  }
+
+  .sidebar-scroll:hover::-webkit-scrollbar-thumb,
+  .app-scroll:hover::-webkit-scrollbar-thumb {
+    background: hsl(from var(--muted-foreground) h s l / 0.32);
+  }
+}
