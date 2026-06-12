@@ -53,7 +53,7 @@ The Go side is responsible for the stateful parts of the app:
 - reading and writing local account state
 - handling tray and window actions
 - serving the browser/LAN runtime
-- interacting with the Codex CLI related files and processes
+- interacting with Codex account files and processes
 
 The main entry point is `main.go`, which bootstraps Wails and passes the `App` type to the runtime. The primary backend logic lives in `app.go`, while `tray.go` handles tray-specific behavior.
 

@@ -4,12 +4,12 @@ This guide covers the local workflow for working on Codex Switcher.
 
 ## Prerequisites
 
-| Tool      | Notes                                                                    |
-| --------- | ------------------------------------------------------------------------ |
-| Go        | Use the version from `go.mod`                                            |
-| Bun       | Used for frontend dependencies and scripts                               |
-| Wails CLI | Install with `go install github.com/wailsapp/wails/v2/cmd/wails@v2.12.0` |
-| WebView2  | Required on Windows                                                      |
+| Tool            | Notes                                                                    |
+| --------------- | ------------------------------------------------------------------------ |
+| Go              | Use the version from `go.mod`                                            |
+| Bun             | Used for frontend dependencies and scripts                               |
+| Wails toolchain | Install with `go install github.com/wailsapp/wails/v2/cmd/wails@v2.12.0` |
+| WebView2        | Required on Windows                                                      |
 
 Check the environment with:
 

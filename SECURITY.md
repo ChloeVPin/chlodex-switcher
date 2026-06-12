@@ -8,7 +8,7 @@ Security fixes are provided for the current release line.
 
 Do not open a public issue for a security report.
 
-Use GitHub's private vulnerability reporting if it is enabled for the repository. If it is not available, contact the maintainers privately through the project's configured private contact channel.
+Use GitHub's private vulnerability reporting if it is enabled for the repository. If it is not available yet, please contact the repository owner privately instead of opening a public issue.
 
 Please include:
 
@@ -16,6 +16,8 @@ Please include:
 - Steps to reproduce it
 - The version of Codex Switcher you tested
 - Any relevant logs, screenshots, or environment details
+
+We aim to acknowledge reports within 3 business days and will work with you on a coordinated fix and disclosure timeline.
 
 ## Scope
 

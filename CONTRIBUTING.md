@@ -4,12 +4,12 @@ Thanks for helping improve Codex Switcher. This guide covers the local setup, th
 
 ## Prerequisites
 
-| Tool      | Notes                                                                    |
-| --------- | ------------------------------------------------------------------------ |
-| Go        | Use the version from `go.mod`                                            |
-| Bun       | Used for frontend scripts                                                |
-| Wails CLI | Install with `go install github.com/wailsapp/wails/v2/cmd/wails@v2.12.0` |
-| WebView2  | Required on Windows for the desktop shell                                |
+| Tool            | Notes                                                                    |
+| --------------- | ------------------------------------------------------------------------ |
+| Go              | Use the version from `go.mod`                                            |
+| Bun             | Used for frontend scripts                                                |
+| Wails toolchain | Install with `go install github.com/wailsapp/wails/v2/cmd/wails@v2.12.0` |
+| WebView2        | Required on Windows for the desktop shell                                |
 
 Check your environment with:
 
@@ -63,6 +63,7 @@ Do not edit generated files in `src/wailsjs/` by hand.
 - Explain what changed and why it matters.
 - Include screenshots for UI changes.
 - Call out any follow-up work that should happen later.
+- Use the GitHub issue forms for bugs and feature requests so reports stay structured.
 
 ## Code style
 

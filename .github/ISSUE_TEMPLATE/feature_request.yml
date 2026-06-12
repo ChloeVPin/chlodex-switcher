@@ -1,0 +1,49 @@
+name: Feature request
+description: Suggest an improvement or new workflow
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. The most useful feature requests explain the problem first, then the change that would solve it.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the friction, workflow gap, or limitation you are hitting.
+      placeholder: I currently have to...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to see?
+      description: Describe the behavior you want in the app.
+      placeholder: It would be better if...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+      description: Share any workarounds or other approaches you tried.
+      placeholder: I tried...
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the app would this affect?
+      options:
+        - Accounts
+        - Switching
+        - Usage
+        - Warm-up
+        - Import / export
+        - Tray / window controls
+        - Browser / LAN mode
+        - Build / install
+        - Docs
+        - Other
+    validations:
+      required: true

@@ -6,6 +6,19 @@
 
 Codex Switcher is a modern Windows desktop GUI for managing multiple Codex accounts from one place.
 
+![License](https://img.shields.io/github/license/ChloeVPin/chlodex-switcher)
+![CI](https://img.shields.io/github/actions/workflow/status/ChloeVPin/chlodex-switcher/ci.yml?branch=main)
+![Release](https://img.shields.io/github/v/release/ChloeVPin/chlodex-switcher?label=release)
+
+## At a glance
+
+| Area  | What you get                                   |
+| ----- | ---------------------------------------------- |
+| App   | Wails-powered Windows desktop GUI              |
+| Stack | Go backend, React frontend, TypeScript, Bun    |
+| Modes | Native window, tray, and browser/LAN access    |
+| Focus | Account switching, usage, warm-up, and backups |
+
 ## Why this exists
 
 Codex Switcher exists for the moments where one account is not enough. It gives you a clean GUI for switching identities, checking usage, warming accounts, and keeping backups without digging through config files by hand.
@@ -24,7 +37,7 @@ Codex Switcher exists for the moments where one account is not enough. It gives 
 
 ### Download
 
-Grab the latest release from GitHub Releases and run the Windows installer or `.exe`.
+Grab the latest release from [GitHub Releases](https://github.com/ChloeVPin/chlodex-switcher/releases/latest) and run the Windows installer or `.exe`.
 
 ### First launch
 
@@ -107,12 +120,14 @@ bun run lan
 - [Development guide](docs/development.md)
 - [Release process](docs/release-process.md)
 - [FAQ](docs/faq.md)
+- [Contributing](CONTRIBUTING.md)
 
 ## Troubleshooting
 
 - If the app window does not appear, install or repair WebView2.
 - If a build fails on Windows, run `wails doctor` and check CGO and compiler setup.
 - If LAN mode is unreachable, confirm the firewall and port settings.
+- If an issue report feels vague, open the bug form in GitHub so the repro details stay structured.
 
 ## Contributing
 

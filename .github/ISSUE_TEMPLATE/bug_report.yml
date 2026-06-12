@@ -1,0 +1,73 @@
+name: Bug report
+description: Report something that is not working as expected
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. The more concrete the details, the faster we can reproduce and fix it.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem in plain language.
+      placeholder: The app did not... / Clicking... caused...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: Tell us what should have happened instead.
+      placeholder: I expected...
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Give the shortest set of steps that reproduces the issue.
+      placeholder: |
+        1. Open the app
+        2. Click...
+        3. See the error
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of the app is affected?
+      options:
+        - Accounts
+        - Switching
+        - Usage
+        - Warm-up
+        - Import / export
+        - Tray / window controls
+        - Browser / LAN mode
+        - Build / install
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Codex Switcher version
+      placeholder: 1.0.0
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      placeholder: Windows 11 24H2
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Add logs, screenshots, or anything else that would help.
+      placeholder: Paste logs or describe anything unusual here.

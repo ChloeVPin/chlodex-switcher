@@ -6,7 +6,7 @@ Common questions about Codex Switcher.
 
 It is a GUI desktop app. It manages Codex account workflows, but the user experience is a graphical desktop interface.
 
-## Does it change my CLI account automatically?
+## Does it switch my account automatically?
 
 Yes. When you switch accounts, the app updates the local account state used by the Codex-related workflows.
 
