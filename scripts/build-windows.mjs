@@ -6,10 +6,11 @@ import {
   copyFileSync,
   readdirSync,
 } from "node:fs";
-import { dirname, join } from "node:path";
+import { join } from "node:path";
 import { spawnSync } from "node:child_process";
 
 const root = process.cwd();
+const bunExe = process.env.BUN_BIN || "bun";
 const wailsExe = process.env.WAILS_BIN || "wails";
 const releaseDir = join(root, "release", "windows");
 const payloadDir = join(root, "build", "bootstrap", "payloads");
@@ -43,6 +44,17 @@ function runWailsBuild(platform, output) {
   if (result.status !== 0) {
     process.exit(result.status ?? 1);
   }
+}
+
+console.log(`\nBuilding backend bundle (dist-electron/lan.js)...`);
+const backendResult = spawnSync(bunExe, ["run", "build:backend"], {
+  cwd: root,
+  stdio: "inherit",
+  shell: false,
+});
+
+if (backendResult.status !== 0) {
+  process.exit(backendResult.status ?? 1);
 }
 
 mkdirSync(releaseDir, { recursive: true });
