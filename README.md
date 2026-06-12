@@ -2,6 +2,8 @@
   <img src="banner.jpg" alt="Codex Switcher banner" width="100%">
 </p>
 
+<div align="center">
+
 # Codex Switcher
 
 Codex Switcher is a modern Windows desktop GUI for managing multiple Codex accounts from one place.
@@ -9,6 +11,16 @@ Codex Switcher is a modern Windows desktop GUI for managing multiple Codex accou
 ![License](https://img.shields.io/github/license/ChloeVPin/chlodex-switcher)
 ![CI](https://img.shields.io/github/actions/workflow/status/ChloeVPin/chlodex-switcher/ci.yml?branch=main)
 ![Release](https://img.shields.io/github/v/release/ChloeVPin/chlodex-switcher?label=release)
+
+<p>
+  <img src="https://img.shields.io/badge/Codex-Switcher-111111?style=flat-square&labelColor=111111&color=111111" alt="Codex Switcher" />
+  <img src="https://img.shields.io/badge/Wails-Desktop-111111?style=flat-square&labelColor=111111&color=111111" alt="Wails Desktop" />
+  <img src="https://img.shields.io/badge/Windows-Only-111111?style=flat-square&labelColor=111111&color=111111" alt="Windows Only" />
+  <img src="https://img.shields.io/badge/React-UI-111111?style=flat-square&labelColor=111111&color=111111" alt="React UI" />
+  <img src="https://img.shields.io/badge/Go-Backend-111111?style=flat-square&labelColor=111111&color=111111" alt="Go Backend" />
+</p>
+
+</div>
 
 ## At a glance
 
