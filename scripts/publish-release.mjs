@@ -4,8 +4,6 @@ import os from "node:os";
 import path from "node:path";
 
 const root = process.cwd();
-const packageJsonPath = path.join(root, "package.json");
-const changelogPath = path.join(root, "CHANGELOG.md");
 const artifactPath = path.join(root, "release", "windows", "codex-switcher.exe");
 
 const readFile = (relativePath) =>
@@ -53,27 +51,7 @@ const ensureFileExists = (filePath, label) => {
   }
 };
 
-const extractChangelogSection = (version) => {
-  const lines = readFile("CHANGELOG.md").split(/\r?\n/);
-  const start = lines.findIndex((line) => line.startsWith(`## [${version}]`));
-
-  if (start === -1) {
-    return null;
-  }
-
-  let end = lines.length;
-  for (let index = start + 1; index < lines.length; index += 1) {
-    if (lines[index].startsWith("## [")) {
-      end = index;
-      break;
-    }
-  }
-
-  return lines.slice(start + 1, end).join("\n").trim();
-};
-
 const createNotes = () => {
-  const changelogSection = extractChangelogSection(currentVersion);
   const notes = [
     title,
     "",
@@ -88,13 +66,15 @@ const createNotes = () => {
     "- Modern Windows desktop GUI for managing multiple Codex accounts",
     "- Native window, tray, and browser/LAN access",
     "- Clean local release artifact for direct download",
+    "",
+    "Install",
+    "",
+    "1. Download `codex-switcher.exe`.",
+    "2. Run it on Windows.",
+    "3. Add your accounts from the GUI.",
+    "",
+    "Full release history lives in `CHANGELOG.md`.",
   ];
-
-  if (changelogSection) {
-    notes.push("", "Changelog", "", changelogSection);
-  }
-
-  notes.push("", "Install", "", "1. Download `codex-switcher.exe`.", "2. Run it on Windows.", "3. Add your accounts from the GUI.");
 
   return notes.join("\n");
 };
@@ -150,4 +130,3 @@ if (releaseExists) {
   ]);
   console.log(`Created GitHub release ${tagName}.`);
 }
-
