@@ -41,6 +41,12 @@ For the Windows single-exe build:
 bun run build:windows
 ```
 
+For the local publish flow:
+
+```bash
+bun run release:publish
+```
+
 ## Release checklist
 
 - Verify the GUI launches.
@@ -52,13 +58,16 @@ bun run build:windows
 
 ## Publishing
 
-When the release is ready:
+When the release is ready, use `bun run release:publish`.
 
-1. Tag the version.
-2. Push the tag.
-3. Create or update the GitHub release entry.
-4. Attach the appropriate build artifact.
-5. Paste the matching changelog entry into the release notes.
+That command:
+
+1. Builds the Windows launcher locally.
+2. Tags the current version if needed.
+3. Pushes the tag to GitHub.
+4. Creates or updates the GitHub release.
+5. Uploads `codex-switcher.exe`.
+6. Uses the matching `CHANGELOG.md` section for the release notes.
 
 ## Post-release
 

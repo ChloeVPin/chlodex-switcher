@@ -119,6 +119,12 @@ For browser/LAN mode:
 bun run lan
 ```
 
+For a local release publish:
+
+```bash
+bun run release:publish
+```
+
 ## Windows notes
 
 - WebView2 is required.
